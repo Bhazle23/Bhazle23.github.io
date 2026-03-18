@@ -1,4 +1,4 @@
-My professional resume and portfolio repository 
+My leet code soltuions
 
 <!---LeetCode Topics Start-->
 # LeetCode Topics
