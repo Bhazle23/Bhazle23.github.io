@@ -1,4 +1,24 @@
-My leet code soltuions
+## Hi This is the Github for [Paul Hazlehurst!]([https://www.linkedin.com/in/paulbhazlehurst/])
+<h1>See my Resume and Work Below</h1> 
+
+[![Linkedin Badge](https://img.shields.io/badge/-haanyali-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/haany-ali)](https://www.linkedin.com/in/paulbhazlehurst/) [![Gmail Badge](https://img.shields.io/badge/-asterp04@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:asterp04@gmail.com)](bhazlehurst2@washcoll.edu)
+
+## Programming Languages
+<img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/python2.png' height='30'/>  <img src =  'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/java.svg' width='30'/> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/js.svg' width='30'/> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/dart.svg' width='33'/> <img src = 
+ <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/sql.svg' width='30'/> 
+
+## Technologies I Use
+ <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/android.svg' height='40'/><img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/flutter-logo.svg' width='30'/> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/git.svg' width='30'/> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/nodejs.svg' width='33'/> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/react.svg' width='33'/>
+ 
+## Current Works
+ * Working in Maryland's General Assembly as an Intern for Delegate Latoya Nkongolo of District 31.
+ * Completing my B.S. in Computer and Political Science.
+ * Working on my senior thesis. 
+ 
+## Other Stuff
+  - [My Resume](https://drive.google.com/file/d/1a6kb4SYgnonhoLLn31Fe4q3_tlFEZ-HW/view?usp=sharing)
+
+## My leet code soltuions
 
 <!---LeetCode Topics Start-->
 # LeetCode Topics
