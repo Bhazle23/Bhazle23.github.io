@@ -14,4 +14,12 @@ My professional resume and portfolio repository
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0977-squares-of-a-sorted-array](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0977-squares-of-a-sorted-array/) | Easy |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0771-jewels-and-stones](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0771-jewels-and-stones/) | Easy |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0771-jewels-and-stones](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0771-jewels-and-stones/) | Easy |
 <!---LeetCode Topics End-->
