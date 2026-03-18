@@ -17,10 +17,8 @@
 ## Other Stuff
   - [My Resume](https://drive.google.com/file/d/1a6kb4SYgnonhoLLn31Fe4q3_tlFEZ-HW/view?usp=sharing)
 
-## My leet code soltuions
-
 <!---LeetCode Topics Start-->
-# LeetCode Topics
+# My Leetcode Solutions
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
