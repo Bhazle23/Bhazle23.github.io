@@ -34,90 +34,106 @@
         </div>
     </nav>
 
-    <header class="pt-48 pb-20 px-6">
+   <header class="pt-48 pb-20 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-10 items-center">
+            
             <div class="md:col-span-8">
                 <div class="inline-flex items-center glass rounded-full px-4 py-1.5 mb-8 border-sky-500/20">
                     <span class="glow-dot"></span>
                     <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Available for 2026 Roles</span>
                 </div>
                 <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-8">
-                    Paul Hazlehurst. <br>
-                    <span class="gradient-text">Student.</span>
+                    Analyzing Policy. <br>
+                    <span class="gradient-text">Architecting Data.</span>
                 </h1>
                 <p class="text-xl text-slate-400 max-w-2xl leading-relaxed mb-12">
-                    Political Science & Computer Science major at Washington College.
+                    Maryland-based Political Science & Computer Science professional specializing in the intersection of 
+                    <strong>legislative strategy</strong> and <strong>predictive modeling</strong>.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#work" class="bg-sky-500 px-8 py-4 rounded-2xl font-bold hover:bg-sky-600 transition shadow-lg shadow-sky-500/20">View My Projects</a>
-                    <a href="assets/PBH Resume.pdf" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition">View My Resume</a>
+                    <a href="#work" class="bg-sky-500 px-8 py-4 rounded-2xl font-bold hover:bg-sky-600 transition shadow-lg shadow-sky-500/20">View Case Studies</a>
+                    <a href="resume.pdf" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition">Download Dossier</a>
                 </div>
             </div>
 
-            <div class="md:col-span-4 aspect-square bento-card glass rounded-[2.5rem] overflow-hidden p-3 border-sky-500/10">
-                <img src="assets/1762867644979 (1).jpg" alt="Paul Hazlehurst" class="w-full h-full object-cover rounded-[2rem] transition duration-500"">
+            <div class="md:col-span-4 aspect-square bento-card glass rounded-[2.5rem] overflow-hidden p-3 border-sky-500/10 hover:border-sky-500/30">
+                <img src="path/to/your/photo.jpg" alt="Paul Hazlehurst" class="w-full h-full object-cover rounded-[2rem] grayscale hover:grayscale-0 transition duration-500">
             </div>
+
         </div>
     </header>
 
-    <section id="work" class="py-24 px-6 relative">
+    <section id="work" class="py-24 px-6 relative border-t border-white/5 bg-slate-900/10">
+        <div class="absolute inset-0 max-w-7xl mx-auto h-[600px] bg-sky-500/5 blur-[150px] rounded-full"></div>
+        
         <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-4xl font-extrabold tracking-tight mb-16">Selected Works</h2>
+            <h2 class="text-4xl font-extrabold tracking-tight mb-16 text-center md:text-left">Featured Impact</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
                 
                 <div class="md:col-span-8 bento-card glass rounded-[2.5rem] p-10 md:p-14 overflow-hidden relative group">
-                    <div class="relative z-10">
-                        <span class="text-sky-400 font-bold text-sm tracking-widest uppercase italic">FinTech</span>
-                        <h3 class="text-4xl font-bold mt-4 mb-5 text-white">Stock Trading Application</h3>
-                        <p class="text-slate-400 max-w-lg mb-10 leading-relaxed">A custom application developed in Flutter to allow users to follow and trade stocks efficiently with real-time API integration.</p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Python</span>
-                            <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">SQL</span>
-                            <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Flutter</span>
+                    <div class="relative z-10 flex flex-col md:flex-row gap-12 items-start">
+                        <div class="flex-1">
+                            <span class="text-sky-400 font-bold text-sm tracking-widest uppercase italic">FinTech</span>
+                            <h3 class="text-4xl font-bold mt-4 mb-5 text-white">Stock Trading Application</h3>
+                            <p class="text-slate-400 max-w-lg mb-10 leading-relaxed">A custom application developed in Flutter to allow users to follow and trade stocks efficiently with real-time API integration.</p>
+                            <div class="flex flex-wrap gap-3 mb-10 md:mb-0">
+                                <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Python</span>
+                                <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">SQL</span>
+                                <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Flutter</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hidden md:block w-40 h-40 bg-sky-500/5 rounded-3xl border border-sky-500/10 flex items-center justify-center relative overflow-hidden group-hover:border-sky-500/30 transition">
+                            <img src="path/to/app-icon.png" alt="Stock App Icon" class="w-full h-full object-cover">
                         </div>
                     </div>
-                    <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition duration-500"></div>
+                    <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition duration-500"></div>
                 </div>
 
-                <div class="md:col-span-4 bento-card glass rounded-[2.5rem] p-10 flex flex-col justify-between bg-slate-950/20">
-                    <div class="text-center">
-                        <div class="text-6xl font-extrabold text-white tracking-tighter">Varsity</div>
-                        <div class="text-sky-400 font-bold uppercase tracking-widest text-xs mt-2">Lacrosse Player</div>
-                    </div>
-                    <div class="mt-8 pt-8 border-t border-white/5">
-                        <p class="text-xs text-slate-500 uppercase font-bold mb-2 text-center tracking-widest">Leadership</p>
+                <div class="md:col-span-4 bento-card glass rounded-[2.5rem] p-10 flex flex-col justify-between overflow-hidden relative group">
+                    <div class="relative z-10">
+                        <div class="text-center mb-6">
+                            <div class="text-6xl font-extrabold text-white tracking-tighter">Varsity</div>
+                            <div class="text-sky-400 font-bold uppercase tracking-widest text-xs mt-2">Lacrosse Player</div>
+                        </div>
+                        <p class="text-xs text-slate-500 uppercase font-bold mb-3 text-center tracking-widest">Leadership</p>
                         <p class="text-center text-sm font-bold text-slate-300">Washington College '26</p>
                     </div>
+                    
+                    <div class="absolute inset-0 w-full h-full bg-slate-950/20 rounded-[2rem] overflow-hidden">
+                        <img src="path/to/athlete-photo.jpg" alt="Lacrosse Photo" class="w-full h-full object-cover opacity-10 grayscale hover:opacity-100 hover:grayscale-0 hover:scale-105 transition duration-500">
+                    </div>
                 </div>
 
-                <div class="md:col-span-4 bento-card glass rounded-[2.5rem] p-10 flex flex-col justify-between group">
+                <div class="md:col-span-4 bento-card glass rounded-[2.5rem] p-10 flex flex-col justify-between bg-slate-950/20 group hover:border-indigo-400/30 transition">
                     <div>
-                        <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 border border-indigo-500/20 group-hover:border-indigo-400 transition">
-                            <i class="fas fa-gavel text-indigo-400"></i>
+                        <div class="w-14 h-14 bg-indigo-500/15 rounded-2xl flex items-center justify-center mb-8 border border-indigo-500/10 group-hover:border-indigo-400 transition">
+                            <i class="fas fa-gavel text-3xl text-indigo-400"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-3">Policy Engine</h3>
                         <p class="text-slate-400 text-sm leading-relaxed">A statistical model analyzing bill trajectories within the Maryland General Assembly.</p>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-[10px] text-slate-500 font-mono uppercase tracking-tighter">#PoliticalScience #DataScience</span>
+                    <div class="mt-6 flex flex-wrap gap-2 text-[10px] text-slate-500 font-mono">
+                        <span>#DataScience</span> <span>#PoliticalScience</span>
                     </div>
                 </div>
 
                 <div class="md:col-span-8 bento-card glass rounded-[2.5rem] p-10 md:p-14 overflow-hidden relative group">
-                    <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start">
+                    <div class="relative z-10 flex flex-col md:flex-row gap-12 items-start">
                         <div class="flex-1">
                             <span class="text-emerald-400 font-bold text-sm tracking-widest uppercase italic">Full Stack</span>
                             <h3 class="text-4xl font-bold mt-4 mb-5 text-white">WAC Fitness App</h3>
-                            <p class="text-slate-400 max-w-md mb-8 leading-relaxed">An Android-based fitness ecosystem designed for the Washington College community, built during Dr. Ramsey’s development course.</p>
-                            <div class="flex gap-4">
-                                <a href="#" class="text-sm font-bold text-white flex items-center gap-2 hover:text-emerald-400 transition">
-                                    <i class="fab fa-github"></i> Source Code
-                                </a>
+                            <p class="text-slate-400 max-w-md mb-8 leading-relaxed">An Android-based ecosystem for the Washington College community, prioritizing user performance data.</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Android</span>
+                                <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Java</span>
+                                <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10 font-mono">Firebase</span>
                             </div>
                         </div>
-                        <div class="hidden md:block w-32 h-32 bg-emerald-500/5 rounded-3xl border border-emerald-500/10 flex items-center justify-center">
-                            <i class="fas fa-mobile-alt text-4xl text-emerald-500/20"></i>
+                        
+                        <div class="hidden md:block w-40 h-40 bg-emerald-500/5 rounded-3xl border border-emerald-500/10 flex items-center justify-center relative overflow-hidden hover:scale-105 transition">
+                            <img src="path/to/fitness-mockup.png" alt="Fitness Mockup" class="w-full h-full object-cover">
                         </div>
                     </div>
                     <div class="absolute -left-20 -top-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl group-hover:bg-emerald-500/10 transition duration-500"></div>
