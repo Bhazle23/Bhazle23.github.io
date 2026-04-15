@@ -3,137 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Hazlehurst | Portfolio</title>
+    <title>Paul Hazlehurst | Policy & Data Science</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background: #121212; color: #d6d6d6; font-family: 'Inter', sans-serif; }
-        .sidebar-card, .main-content { background: #1e1e1f; border: 1px solid #383838; }
-        .service-card { background: linear-gradient(to bottom right, #2b2b2c 0%, #1e1e1f 100%); border: 1px solid #383838; }
-        .gold-text { color: #ffdb70; }
-        .gold-bg { background-color: #ffdb70; }
-        .nav-link { cursor: pointer; transition: 0.3s; }
-        .nav-link.active { color: #ffdb70; }
-        .content-section { display: none; }
-        .content-section.active { display: block; animation: fadeIn 0.5s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bento-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-5px); border-color: #38bdf8; box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2); }
+        .glow-dot { height: 8px; width: 8px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 8px; box-shadow: 0 0 10px #10b981; }
     </style>
 </head>
-<body class="p-4 md:p-12 lg:flex lg:justify-center lg:items-start lg:gap-8 min-h-screen">
+<body class="antialiased selection:bg-sky-500/30">
 
-    <aside class="sidebar-card w-full lg:w-80 rounded-3xl p-8 mb-8 lg:mb-0 lg:sticky lg:top-12 flex flex-col items-center">
-        <div class="bg-[#2b2b2c] p-4 rounded-[30px] mb-6">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Paul" alt="Paul" class="w-32 h-32">
-        </div>
-
-        <h1 class="text-2xl font-bold text-white mb-2 text-center">Paul Hazlehurst</h1>
-
-        <p class="bg-[#2b2b2c] text-xs px-4 py-1.5 rounded-lg mb-8">Data & Policy Analyst / Dev</p>
-
-        <div class="w-full border-t border-[#383838] mb-8"></div>
-
-        <div class="w-full space-y-6">
-            <div class="flex items-center gap-4">
-                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text"><i class="fas fa-envelope"></i></div>
-                <div class="overflow-hidden">
-                    <p class="text-[10px] text-gray-500 uppercase">Email</p>
-                    <p class="text-sm truncate">paul.h@example.com</p>
-                </div>
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <span class="font-extrabold text-xl tracking-tighter">PH<span class="text-sky-400">.</span></span>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#work" class="hover:text-white transition">Work</a>
+                <a href="#expertise" class="hover:text-white transition">Expertise</a>
+                <a href="#about" class="hover:text-white transition">Story</a>
             </div>
+            <a href="mailto:your-email@example.com" class="bg-white text-black px-5 py-2 rounded-xl text-sm font-bold hover:bg-sky-400 hover:text-white transition-all">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
 
-            <div class="flex items-center gap-4">
-                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text"><i class="fas fa-map-marker-alt"></i></div>
-                <div>
-                    <p class="text-[10px] text-gray-500 uppercase">Location</p>
-                    <p class="text-sm">Chestertown, MD</p>
-                </div>
+    <header class="pt-40 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-flex items-center glass rounded-full px-4 py-1.5 mb-6 border-sky-500/20">
+                <span class="glow-dot"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Available for 2026 Roles</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-tight mb-8">
+                Analyzing Policy. <br>
+                <span class="gradient-text">Architecting Data.</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
+                Maryland-based Political Science & Computer Science professional specializing in the intersection of 
+                <strong>legislative strategy</strong> and <strong>predictive modeling</strong>.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#work" class="bg-sky-500 px-8 py-4 rounded-2xl font-bold hover:bg-sky-600 transition shadow-lg shadow-sky-500/20">View Case Studies</a>
+                <a href="resume.pdf" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition">Download Dossier</a>
             </div>
         </div>
-    </aside>
+    </header>
 
-    <main class="main-content flex-1 max-w-4xl rounded-3xl relative min-h-[600px]">
-        
-        <nav class="absolute top-0 right-0 sidebar-card rounded-bl-3xl rounded-tr-3xl px-8 py-4 z-10">
-            <ul class="flex gap-6 md:gap-8 text-sm font-medium">
-                <li><span onclick="showTab('about')" id="link-about" class="nav-link active">About</span></li>
-                <li><span onclick="showTab('portfolio')" id="link-portfolio" class="nav-link">Portfolio</span></li>
-                <li><span onclick="showTab('contact')" id="link-contact" class="nav-link">Contact</span></li>
-                <li><a href="resume.pdf" target="_blank" class="hover:text-gray-400">Resume <i class="fas fa-external-link-alt text-[10px]"></i></a></li>
-            </ul>
-        </nav>
-
-        <div class="p-8 md:p-12">
-            <section id="about" class="content-section active">
-                <header class="mb-8">
-                    <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">About Me<span class="absolute -bottom-2 left-0 w-10 h-1.5 gold-bg rounded-full"></span></h2>
-                </header>
-                <p class="text-gray-400 leading-relaxed mb-12">I specialize in data-driven policy analysis and building software solutions that bridge the gap between complex information and clear action.</p>
-                
-                <h3 class="text-2xl font-bold text-white mb-8">Capabilities</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="service-card p-6 rounded-2xl flex gap-4">
-                        <div class="text-3xl gold-text pt-1"><i class="fas fa-chart-bar"></i></div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2">Data Science</h4>
-                            <p class="text-sm text-gray-400">Using Python and R to model constituent data and legislative trends.</p>
+    <section id="work" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12">Featured Impact</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 bento-card glass rounded-[2rem] p-8 md:p-12 overflow-hidden relative group">
+                    <div class="relative z-10">
+                        <span class="text-sky-400 font-bold text-sm tracking-widest uppercase">Legislative Analysis</span>
+                        <h3 class="text-3xl font-bold mt-4 mb-4">The Maryland Bill Tracker</h3>
+                        <p class="text-slate-400 max-w-md mb-8">A custom data pipeline that predicts bill passage probability using 10 years of General Assembly historical data.</p>
+                        <div class="flex gap-3">
+                            <span class="bg-white/5 px-3 py-1 rounded-lg text-xs border border-white/10">Python</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-lg text-xs border border-white/10">SQL</span>
+                            <span class="bg-white/5 px-3 py-1 rounded-lg text-xs border border-white/10">NLP</span>
                         </div>
                     </div>
-                    <div class="service-card p-6 rounded-2xl flex gap-4">
-                        <div class="text-3xl gold-text pt-1"><i class="fas fa-building"></i></div>
-                        <div>
-                            <h4 class="text-lg font-bold text-white mb-2">Public Policy</h4>
-                            <p class="text-sm text-gray-400">Drafting memos and analyzing bill trajectories for state government.</p>
+                    <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition"></div>
+                </div>
+
+                <div class="md:col-span-4 bento-card glass rounded-[2rem] p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Constituent Sentiment Engine</h3>
+                        <p class="text-slate-400 text-sm">Bayesian modeling for constituent feedback data.</p>
+                    </div>
+                    <a href="#" class="text-sm font-bold text-sky-400 mt-6 flex items-center gap-2">View Study <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <div class="md:col-span-4 bento-card glass rounded-[2rem] p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-mobile-alt text-emerald-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">WAC Fitness</h3>
+                        <p class="text-slate-400 text-sm">Full-stack mobile solution for student athletes.</p>
+                    </div>
+                    <a href="#" class="text-sm font-bold text-sky-400 mt-6 flex items-center gap-2">View Code <i class="fas fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <div class="md:col-span-8 bento-card glass rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-4">Academic Excellence</h3>
+                        <p class="text-slate-400 mb-6 italic">Washington College, 2026</p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between text-sm border-b border-white/5 pb-2">
+                                <span>Political Science</span>
+                                <span class="text-sky-400 font-bold">Summa Cum Laude</span>
+                            </div>
+                            <div class="flex justify-between text-sm border-b border-white/5 pb-2">
+                                <span>Computer Science</span>
+                                <span class="text-sky-400 font-bold">Research Honors</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="portfolio" class="content-section">
-                <header class="mb-8">
-                    <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">Project Timeline<span class="absolute -bottom-2 left-0 w-10 h-1.5 gold-bg rounded-full"></span></h2>
-                </header>
-                <div class="space-y-8 ml-4 border-l-2 border-[#383838]">
-                    <div class="relative pl-8">
-                        <div class="absolute w-3 h-3 gold-bg rounded-full -left-[7px] top-1.5"></div>
-                        <h4 class="text-white font-bold">Legislative Bill Tracking System</h4>
-                        <span class="gold-text text-sm">2026 - Present</span>
-                        <p class="text-gray-400 text-sm mt-2">A data pipeline analyzing the movement of bills through the General Assembly.</p>
-                    </div>
-                    <div class="relative pl-8">
-                        <div class="absolute w-3 h-3 bg-gray-500 rounded-full -left-[7px] top-1.5"></div>
-                        <h4 class="text-white font-bold">Senior Thesis: Statistical Modeling</h4>
-                        <span class="gold-text text-sm">2025 - 2026</span>
-                        <p class="text-gray-400 text-sm mt-2">Applying Bayesian modeling and multivariate regressions to constituent data.</p>
+                    <div class="flex-none text-center">
+                        <div class="text-5xl font-extrabold text-white">Varsity</div>
+                        <div class="text-sky-400 font-bold uppercase tracking-tighter">Lacrosse Player</div>
                     </div>
                 </div>
-            </section>
-
-            <section id="contact" class="content-section">
-                <header class="mb-8">
-                    <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">Connect<span class="absolute -bottom-2 left-0 w-10 h-1.5 gold-bg rounded-full"></span></h2>
-                </header>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="service-card p-6 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition">
-                        <div class="text-3xl gold-text"><i class="fab fa-linkedin"></i></div>
-                        <div><h4 class="font-bold text-white">LinkedIn</h4><p class="text-xs text-gray-400">Professional Network</p></div>
-                    </a>
-                    <a href="https://github.com/yourusername" target="_blank" class="service-card p-6 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition">
-                        <div class="text-3xl gold-text"><i class="fab fa-github"></i></div>
-                        <div><h4 class="font-bold text-white">GitHub</h4><p class="text-xs text-gray-400">Code & Projects</p></div>
-                    </a>
-                </div>
-            </section>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <script>
-        // Simple tab switching logic
-        function showTab(tabId) {
-            document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            document.getElementById('link-' + tabId).classList.add('active');
-        }
-    </script>
+    <section id="expertise" class="py-20 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">The Technical <br><span class="text-slate-500">Arsenal</span></h2>
+                <p class="text-slate-400 leading-relaxed mb-8">My work sits at the unique intersection of civic engagement and algorithmic efficiency. I don't just write code; I write policy that works.</p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="glass px-4 py-2 rounded-xl text-sm">Python (Pandas/NumPy)</span>
+                    <span class="glass px-4 py-2 rounded-xl text-sm">R (Tidyverse)</span>
+                    <span class="glass px-4 py-2 rounded-xl text-sm">SQL (PostgreSQL)</span>
+                    <span class="glass px-4 py-2 rounded-xl text-sm">SPSS</span>
+                    <span class="glass px-4 py-2 rounded-xl text-sm">React/Tailwind</span>
+                    <span class="glass px-4 py-2 rounded-xl text-sm">Legislation Writing</span>
+                </div>
+            </div>
+            <div class="glass rounded-[2rem] p-8 flex items-center justify-center">
+                <div class="w-full aspect-square border-2 border-dashed border-white/10 rounded-2xl flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-brain text-5xl text-sky-400/30 mb-4"></i>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest">Model Training in Progress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold mb-2">Let's build the future of governance.</h3>
+                <p class="text-slate-500">Currently in Chestertown, MD | Open to relocation.</p>
+            </div>
+            <div class="flex gap-6 text-2xl">
+                <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <p class="text-center text-slate-600 text-[10px] mt-20">© 2026 PAUL HAZLEHURST. BUILT FOR HIGH-STAKES IMPACT.</p>
+    </footer>
+
 </body>
 </html>
