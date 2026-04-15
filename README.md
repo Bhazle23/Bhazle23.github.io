@@ -24,6 +24,7 @@
 | ------- | ------- |
 | [0682-baseball-game](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0682-baseball-game/) | Easy |
 | [0977-squares-of-a-sorted-array](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0977-squares-of-a-sorted-array/) | Easy |
+| [1046-last-stone-weight](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/1046-last-stone-weight/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -60,4 +61,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0070-climbing-stairs](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0070-climbing-stairs/) | Easy |
+## Heap (Priority Queue)
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1046-last-stone-weight](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/1046-last-stone-weight/) | Easy |
 <!---LeetCode Topics End-->
