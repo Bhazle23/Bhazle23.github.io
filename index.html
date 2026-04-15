@@ -11,20 +11,22 @@
         body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
         .glass { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .bento-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255, 255, 255, 0.05); }
         .bento-card:hover { transform: translateY(-5px); border-color: #38bdf8; box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2); }
         .glow-dot { height: 8px; width: 8px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 8px; box-shadow: 0 0 10px #10b981; }
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="antialiased selection:bg-sky-500/30">
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 mt-2">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
             <span class="font-extrabold text-xl tracking-tighter">PH<span class="text-sky-400">.</span></span>
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
                 <a href="#work" class="hover:text-white transition">Work</a>
                 <a href="#expertise" class="hover:text-white transition">Expertise</a>
-                <a href="#about" class="hover:text-white transition">Story</a>
+                <a href="#story" class="hover:text-white transition">Story</a>
             </div>
             <a href="mailto:your-email@example.com" class="bg-white text-black px-5 py-2 rounded-xl text-sm font-bold hover:bg-sky-400 hover:text-white transition-all">
                 Let's Talk
@@ -32,73 +34,83 @@
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="inline-flex items-center glass rounded-full px-4 py-1.5 mb-6 border-sky-500/20">
-                <span class="glow-dot"></span>
-                <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Available for 2026 Roles</span>
+    <header class="pt-48 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-10 items-center">
+            
+            <div class="md:col-span-8">
+                <div class="inline-flex items-center glass rounded-full px-4 py-1.5 mb-8 border-sky-500/20">
+                    <span class="glow-dot"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Available for 2026 Roles</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-8">
+                    Analyzing Policy. <br>
+                    <span class="gradient-text">Architecting Data.</span>
+                </h1>
+                <p class="text-xl text-slate-400 max-w-2xl leading-relaxed mb-12">
+                    Maryland-based Political Science & Computer Science professional specializing in the intersection of 
+                    <strong>legislative strategy</strong> and <strong>predictive modeling</strong>.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#work" class="bg-sky-500 px-8 py-4 rounded-2xl font-bold hover:bg-sky-600 transition shadow-lg shadow-sky-500/20">View Case Studies</a>
+                    <a href="resume.pdf" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition">Download Dossier</a>
+                </div>
             </div>
-            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-tight mb-8">
-                Analyzing Policy. <br>
-                <span class="gradient-text">Architecting Data.</span>
-            </h1>
-            <p class="text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
-                Maryland-based Political Science & Computer Science professional specializing in the intersection of 
-                <strong>legislative strategy</strong> and <strong>predictive modeling</strong>.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#work" class="bg-sky-500 px-8 py-4 rounded-2xl font-bold hover:bg-sky-600 transition shadow-lg shadow-sky-500/20">View Case Studies</a>
-                <a href="resume.pdf" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition">Download Dossier</a>
+
+            <div class="md:col-span-4 aspect-square bento-card glass rounded-[2.5rem] overflow-hidden p-3 border-sky-500/10 hover:border-sky-500/30">
+                <img src="path/to/your/photo.jpg" alt="Paul Hazlehurst" class="w-full h-full object-cover rounded-[2rem] grayscale hover:grayscale-0 transition duration-500">
             </div>
+
         </div>
     </header>
 
-    <section id="work" class="py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12">Featured Impact</h2>
+    <section id="work" class="py-24 px-6 relative">
+        <div class="absolute inset-0 max-w-7xl mx-auto h-[600px] bg-indigo-500/5 blur-[150px] rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-4xl font-extrabold tracking-tight mb-16 text-center md:text-left">Featured Impact</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div class="md:col-span-8 bento-card glass rounded-[2rem] p-8 md:p-12 overflow-hidden relative group">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-8 bento-card glass rounded-[2.5rem] p-10 md:p-14 overflow-hidden relative group">
                     <div class="relative z-10">
                         <span class="text-sky-400 font-bold text-sm tracking-widest uppercase">Legislative Analysis</span>
-                        <h3 class="text-3xl font-bold mt-4 mb-4">The Maryland Bill Tracker</h3>
-                        <p class="text-slate-400 max-w-md mb-8">A custom data pipeline that predicts bill passage probability using 10 years of General Assembly historical data.</p>
+                        <h3 class="text-4xl font-bold mt-4 mb-5 text-white">The Maryland Bill Tracker</h3>
+                        <p class="text-slate-400 max-w-lg mb-10 leading-relaxed">A custom data pipeline that predicts bill passage probability using 10 years of General Assembly historical data.</p>
                         <div class="flex gap-3">
-                            <span class="bg-white/5 px-3 py-1 rounded-lg text-xs border border-white/10">Python</span>
-                            <span class="bg-white/5 px-3 py-1 rounded-lg text-xs border border-white/10">SQL</span>
-                            <span class="bg-white/5 px-3 py-1 rounded-lg text-xs border border-white/10">NLP</span>
+                            <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10">Python</span>
+                            <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10">SQL</span>
+                            <span class="bg-white/5 px-4 py-1.5 rounded-lg text-xs border border-white/10">NLP</span>
                         </div>
                     </div>
-                    <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition"></div>
+                    <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition duration-500"></div>
                 </div>
 
-                <div class="md:col-span-4 bento-card glass rounded-[2rem] p-8 flex flex-col justify-between">
+                <div class="md:col-span-4 bento-card glass rounded-[2.5rem] p-10 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-chart-line text-indigo-400"></i>
+                        <div class="w-14 h-14 bg-indigo-500/15 rounded-2xl flex items-center justify-center mb-8 border border-indigo-500/10">
+                            <i class="fas fa-chart-line text-3xl text-indigo-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Constituent Sentiment Engine</h3>
-                        <p class="text-slate-400 text-sm">Bayesian modeling for constituent feedback data.</p>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Sentiment Engine</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Bayesian modeling for constituent feedback data.</p>
                     </div>
-                    <a href="#" class="text-sm font-bold text-sky-400 mt-6 flex items-center gap-2">View Study <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    <a href="#" class="text-sm font-bold text-sky-400 mt-8 flex items-center gap-2 hover:gap-3 transition-all">View Study <i class="fas fa-arrow-right text-[11px]"></i></a>
                 </div>
 
-                <div class="md:col-span-4 bento-card glass rounded-[2rem] p-8 flex flex-col justify-between">
+                <div class="md:col-span-4 bento-card glass rounded-[2.5rem] p-10 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-mobile-alt text-emerald-400"></i>
+                        <div class="w-14 h-14 bg-emerald-500/15 rounded-2xl flex items-center justify-center mb-8 border border-emerald-500/10">
+                            <i class="fas fa-mobile-alt text-3xl text-emerald-400"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">WAC Fitness</h3>
-                        <p class="text-slate-400 text-sm">Full-stack mobile solution for student athletes.</p>
+                        <h3 class="text-2xl font-bold mb-3 text-white">WAC Fitness</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Full-stack mobile solution for student athletes.</p>
                     </div>
-                    <a href="#" class="text-sm font-bold text-sky-400 mt-6 flex items-center gap-2">View Code <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    <a href="#" class="text-sm font-bold text-sky-400 mt-8 flex items-center gap-2 hover:gap-3 transition-all">View Code <i class="fas fa-arrow-right text-[11px]"></i></a>
                 </div>
 
-                <div class="md:col-span-8 bento-card glass rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:col-span-8 bento-card glass rounded-[2.5rem] p-10 md:p-14 flex flex-col md:flex-row items-center gap-12 bg-slate-950/20">
                     <div class="flex-1">
-                        <h3 class="text-2xl font-bold mb-4">Academic Excellence</h3>
-                        <p class="text-slate-400 mb-6 italic">Washington College, 2026</p>
-                        <div class="space-y-4">
+                        <h3 class="text-3xl font-bold mb-5 text-white">Academic Excellence</h3>
+                        <p class="text-slate-400 mb-8 italic text-base">Washington College, 2026</p>
+                        <div class="space-y-4 max-w-sm">
                             <div class="flex justify-between text-sm border-b border-white/5 pb-2">
                                 <span>Political Science</span>
                                 <span class="text-sky-400 font-bold">Summa Cum Laude</span>
@@ -109,53 +121,70 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-none text-center">
-                        <div class="text-5xl font-extrabold text-white">Varsity</div>
-                        <div class="text-sky-400 font-bold uppercase tracking-tighter">Lacrosse Player</div>
+                    <div class="flex-none text-center bg-sky-500/10 p-10 rounded-3xl border border-sky-500/10">
+                        <div class="text-6xl font-extrabold text-white tracking-tighter">Varsity</div>
+                        <div class="text-sky-400 font-bold uppercase tracking-widest text-xs mt-2">Lacrosse Player</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="expertise" class="py-20 bg-slate-900/30">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
-            <div>
-                <h2 class="text-4xl font-bold mb-6">The Technical <br><span class="text-slate-500">Arsenal</span></h2>
-                <p class="text-slate-400 leading-relaxed mb-8">My work sits at the unique intersection of civic engagement and algorithmic efficiency. I don't just write code; I write policy that works.</p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="glass px-4 py-2 rounded-xl text-sm">Python (Pandas/NumPy)</span>
-                    <span class="glass px-4 py-2 rounded-xl text-sm">R (Tidyverse)</span>
-                    <span class="glass px-4 py-2 rounded-xl text-sm">SQL (PostgreSQL)</span>
-                    <span class="glass px-4 py-2 rounded-xl text-sm">SPSS</span>
-                    <span class="glass px-4 py-2 rounded-xl text-sm">React/Tailwind</span>
-                    <span class="glass px-4 py-2 rounded-xl text-sm">Legislation Writing</span>
+    <section id="expertise" class="py-28 bg-slate-900/40 relative border-t border-white/5">
+        <div class="absolute inset-x-0 bottom-0 max-w-7xl mx-auto h-[300px] bg-sky-500/5 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-16 md:gap-24 relative z-10 items-center">
+            <div class="md:col-span-6">
+                <h2 class="text-5xl font-extrabold tracking-tighter mb-8 text-white">The Technical <br><span class="text-slate-600">Arsenal</span></h2>
+                <p class="text-slate-400 leading-relaxed mb-12 text-lg">My work sits at the unique intersection of civic engagement and algorithmic efficiency. I don't just write code; I write policy that works.</p>
+                
+                <div class="flex flex-wrap gap-3 max-w-lg">
+                    <span class="glass px-5 py-2.5 rounded-xl text-sm border border-white/10 hover:border-sky-500/20 hover:bg-white/5 transition">Python (Pandas/NumPy)</span>
+                    <span class="glass px-5 py-2.5 rounded-xl text-sm border border-white/10 hover:border-sky-500/20 hover:bg-white/5 transition">R (Tidyverse)</span>
+                    <span class="glass px-5 py-2.5 rounded-xl text-sm border border-white/10 hover:border-sky-500/20 hover:bg-white/5 transition">SQL (PostgreSQL)</span>
+                    <span class="glass px-5 py-2.5 rounded-xl text-sm border border-white/10 hover:border-sky-500/20 hover:bg-white/5 transition">SPSS</span>
+                    <span class="glass px-5 py-2.5 rounded-xl text-sm border border-white/10 hover:border-sky-500/20 hover:bg-white/5 transition">React/Tailwind</span>
+                    <span class="glass px-5 py-2.5 rounded-xl text-sm border border-white/10 hover:border-sky-500/20 hover:bg-white/5 transition">Legislation Writing</span>
                 </div>
             </div>
-            <div class="glass rounded-[2rem] p-8 flex items-center justify-center">
-                <div class="w-full aspect-square border-2 border-dashed border-white/10 rounded-2xl flex items-center justify-center">
-                    <div class="text-center">
-                        <i class="fas fa-brain text-5xl text-sky-400/30 mb-4"></i>
-                        <p class="text-xs text-slate-500 uppercase tracking-widest">Model Training in Progress</p>
+            
+            <div class="md:col-span-6 glass rounded-[2.5rem] p-10 flex items-center justify-center bg-slate-950/20 border border-white/5">
+                <div class="w-full aspect-[1.1] border-2 border-dashed border-white/10 rounded-[1.5rem] flex items-center justify-center relative overflow-hidden group">
+                    <div class="text-center relative z-10 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-brain text-6xl text-sky-400/30 mb-5"></i>
+                        <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Model Training in Progress</p>
                     </div>
+                    <div class="absolute inset-0 bg-sky-500/10 blur-[80px] rounded-full scale-150 group-hover:scale-125 transition duration-500"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+    <section id="story" class="py-24 px-6 relative border-t border-white/5">
+        <div class="max-w-4xl mx-auto glass rounded-[2.5rem] p-12 md:p-16 relative z-10">
+            <h2 class="text-4xl font-extrabold tracking-tight mb-10 text-white">The Narrative</h2>
+            <div class="text-slate-400 leading-relaxed space-y-6 text-lg">
+                <p>I thrive on turning granular, messy datasets into strategic legislative insights. My dual background in Political Science and Computer Science allows me to build the technical infrastructure organizations need to validate their policy positions and predict outcomes.</p>
+                <p>Based in Maryland, I am seeking high-impact roles starting in 2026 where I can bridge the gap between technical teams and executive strategy, ideally within public policy, civic tech, or data-driven lobbying.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 border-t border-white/5 mt-10 relative">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
             <div class="text-center md:text-left">
-                <h3 class="text-2xl font-bold mb-2">Let's build the future of governance.</h3>
-                <p class="text-slate-500">Currently in Chestertown, MD | Open to relocation.</p>
+                <h3 class="text-3xl font-extrabold mb-3 text-white">Let's build the future of governance.</h3>
+                <p class="text-slate-500 text-base">Currently based in Chestertown, MD | Open to relocation.</p>
             </div>
-            <div class="flex gap-6 text-2xl">
-                <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="text-slate-400 hover:text-white transition"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope"></i></a>
+            
+            <div class="flex gap-8 text-3xl">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-slate-500 hover:text-sky-400 transition-all hover:scale-110"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/yourusername" target="_blank" class="text-slate-500 hover:text-sky-400 transition-all hover:scale-110"><i class="fab fa-github"></i></a>
+                <a href="mailto:your-email@example.com" class="text-slate-500 hover:text-sky-400 transition-all hover:scale-110"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-        <p class="text-center text-slate-600 text-[10px] mt-20">© 2026 PAUL HAZLEHURST. BUILT FOR HIGH-STAKES IMPACT.</p>
+        
+        <p class="text-center text-slate-600 text-[11px] font-bold uppercase tracking-widest mt-24">© 2026 PAUL HAZLEHURST. BUILT FOR HIGH-STAKES IMPACT.</p>
     </footer>
 
 </body>
