@@ -18,7 +18,7 @@
   - [My Resume](https://drive.google.com/file/d/1a6kb4SYgnonhoLLn31Fe4q3_tlFEZ-HW/view?usp=sharing)
 
 <!---LeetCode Topics Start-->
-# My Leetcode Solutions
+# LeetCode Topics
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -48,4 +48,16 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0682-baseball-game](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0682-baseball-game/) | Easy |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0070-climbing-stairs](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0070-climbing-stairs/) | Easy |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0070-climbing-stairs](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0070-climbing-stairs/) | Easy |
+## Memoization
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0070-climbing-stairs](https://github.com/Bhazle23/Bhazle23.github.io/tree/main/LeetCode/Easy/0070-climbing-stairs/) | Easy |
 <!---LeetCode Topics End-->
