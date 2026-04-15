@@ -7,20 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { 
-            background: #121212; 
-            color: #d6d6d6;
-            font-family: 'Inter', sans-serif;
-        }
-        .sidebar-card { background: #1e1e1f; border: 1px solid #383838; }
-        .main-content { background: #1e1e1f; border: 1px solid #383838; }
+        body { background: #121212; color: #d6d6d6; font-family: 'Inter', sans-serif; }
+        .sidebar-card, .main-content { background: #1e1e1f; border: 1px solid #383838; }
         .service-card { background: linear-gradient(to bottom right, #2b2b2c 0%, #1e1e1f 100%); border: 1px solid #383838; }
         .gold-text { color: #ffdb70; }
-        .nav-active { color: #ffdb70; }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #121212; }
-        ::-webkit-scrollbar-thumb { background: #383838; border-radius: 10px; }
+        .gold-bg { background-color: #ffdb70; }
+        .nav-link { cursor: pointer; transition: 0.3s; }
+        .nav-link.active { color: #ffdb70; }
+        .content-section { display: none; }
+        .content-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="p-4 md:p-12 lg:flex lg:justify-center lg:items-start lg:gap-8 min-h-screen">
@@ -29,17 +25,16 @@
         <div class="bg-[#2b2b2c] p-4 rounded-[30px] mb-6">
             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Paul" alt="Paul" class="w-32 h-32">
         </div>
-        
+
         <h1 class="text-2xl font-bold text-white mb-2 text-center">Paul Hazlehurst</h1>
-        <p class="bg-[#2b2b2c] text-xs px-4 py-1.5 rounded-lg mb-8 text-center">Data & Policy Analyst / Dev</p>
+
+        <p class="bg-[#2b2b2c] text-xs px-4 py-1.5 rounded-lg mb-8">Data & Policy Analyst / Dev</p>
 
         <div class="w-full border-t border-[#383838] mb-8"></div>
 
         <div class="w-full space-y-6">
             <div class="flex items-center gap-4">
-                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text">
-                    <i class="fas fa-envelope"></i>
-                </div>
+                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text"><i class="fas fa-envelope"></i></div>
                 <div class="overflow-hidden">
                     <p class="text-[10px] text-gray-500 uppercase">Email</p>
                     <p class="text-sm truncate">paul.h@example.com</p>
@@ -47,29 +42,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div>
-                    <p class="text-[10px] text-gray-500 uppercase">Phone</p>
-                    <p class="text-sm">+1 (213) 555-0100</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text">
-                    <i class="fas fa-calendar"></i>
-                </div>
-                <div>
-                    <p class="text-[10px] text-gray-500 uppercase">Birthday</p>
-                    <p class="text-sm">May 12, 1999</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
+                <div class="sidebar-card p-3 rounded-xl shadow-xl text-xs gold-text"><i class="fas fa-map-marker-alt"></i></div>
                 <div>
                     <p class="text-[10px] text-gray-500 uppercase">Location</p>
                     <p class="text-sm">Chestertown, MD</p>
@@ -78,71 +51,89 @@
         </div>
     </aside>
 
-    <main class="main-content flex-1 max-w-4xl rounded-3xl relative">
+    <main class="main-content flex-1 max-w-4xl rounded-3xl relative min-h-[600px]">
         
-        <nav class="absolute top-0 right-0 sidebar-card rounded-bl-3xl rounded-tr-3xl px-8 py-4 hidden md:block">
-            <ul class="flex gap-8 text-sm font-medium">
-                <li><a href="#" class="nav-active">About</a></li>
-                <li><a href="#" class="hover:text-gray-400">Resume</a></li>
-                <li><a href="#" class="hover:text-gray-400">Portfolio</a></li>
-                <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+        <nav class="absolute top-0 right-0 sidebar-card rounded-bl-3xl rounded-tr-3xl px-8 py-4 z-10">
+            <ul class="flex gap-6 md:gap-8 text-sm font-medium">
+                <li><span onclick="showTab('about')" id="link-about" class="nav-link active">About</span></li>
+                <li><span onclick="showTab('portfolio')" id="link-portfolio" class="nav-link">Portfolio</span></li>
+                <li><span onclick="showTab('contact')" id="link-contact" class="nav-link">Contact</span></li>
+                <li><a href="resume.pdf" target="_blank" class="hover:text-gray-400">Resume <i class="fas fa-external-link-alt text-[10px]"></i></a></li>
             </ul>
         </nav>
 
-        <section class="p-8 md:p-12">
-            <header class="mb-8">
-                <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">
-                    About Me
-                    <span class="absolute -bottom-2 left-0 w-10 h-1.5 bg-[#ffdb70] rounded-full"></span>
-                </h2>
-            </header>
-
-            <div class="text-gray-400 leading-relaxed space-y-4 mb-12">
-                <p>
-                    Hi, I'm Paul, a dedicated professional focused on building impactful solutions through data, policy analysis, and software development.
-                </p>
-                <p>
-                    My goal is to build your insight so that it is clear and actionable, but at the same time accurate. I add a personal touch to your project and make sure it is eye-catching and easy to use.
-                </p>
-            </div>
-
-            <h3 class="text-2xl font-bold text-white mb-8">What I'm Doing</h3>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="service-card p-6 rounded-2xl flex gap-4">
-                    <div class="text-3xl gold-text pt-1"><i class="fas fa-chart-line"></i></div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2">Data Analysis</h4>
-                        <p class="text-sm text-gray-400">Expert analysis of complex datasets to drive policy decisions at a professional level.</p>
+        <div class="p-8 md:p-12">
+            <section id="about" class="content-section active">
+                <header class="mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">About Me<span class="absolute -bottom-2 left-0 w-10 h-1.5 gold-bg rounded-full"></span></h2>
+                </header>
+                <p class="text-gray-400 leading-relaxed mb-12">I specialize in data-driven policy analysis and building software solutions that bridge the gap between complex information and clear action.</p>
+                
+                <h3 class="text-2xl font-bold text-white mb-8">Capabilities</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="service-card p-6 rounded-2xl flex gap-4">
+                        <div class="text-3xl gold-text pt-1"><i class="fas fa-chart-bar"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Data Science</h4>
+                            <p class="text-sm text-gray-400">Using Python and R to model constituent data and legislative trends.</p>
+                        </div>
+                    </div>
+                    <div class="service-card p-6 rounded-2xl flex gap-4">
+                        <div class="text-3xl gold-text pt-1"><i class="fas fa-building"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Public Policy</h4>
+                            <p class="text-sm text-gray-400">Drafting memos and analyzing bill trajectories for state government.</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="service-card p-6 rounded-2xl flex gap-4">
-                    <div class="text-3xl gold-text pt-1"><i class="fas fa-code"></i></div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2">Software Development</h4>
-                        <p class="text-sm text-gray-400">Developing robust and scalable software solutions with professional-grade engineering.</p>
+            <section id="portfolio" class="content-section">
+                <header class="mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">Project Timeline<span class="absolute -bottom-2 left-0 w-10 h-1.5 gold-bg rounded-full"></span></h2>
+                </header>
+                <div class="space-y-8 ml-4 border-l-2 border-[#383838]">
+                    <div class="relative pl-8">
+                        <div class="absolute w-3 h-3 gold-bg rounded-full -left-[7px] top-1.5"></div>
+                        <h4 class="text-white font-bold">Legislative Bill Tracking System</h4>
+                        <span class="gold-text text-sm">2026 - Present</span>
+                        <p class="text-gray-400 text-sm mt-2">A data pipeline analyzing the movement of bills through the General Assembly.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <div class="absolute w-3 h-3 bg-gray-500 rounded-full -left-[7px] top-1.5"></div>
+                        <h4 class="text-white font-bold">Senior Thesis: Statistical Modeling</h4>
+                        <span class="gold-text text-sm">2025 - 2026</span>
+                        <p class="text-gray-400 text-sm mt-2">Applying Bayesian modeling and multivariate regressions to constituent data.</p>
                     </div>
                 </div>
+            </section>
 
-                <div class="service-card p-6 rounded-2xl flex gap-4">
-                    <div class="text-3xl gold-text pt-1"><i class="fas fa-file-contract"></i></div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2">Policy Analysis</h4>
-                        <p class="text-sm text-gray-400">In-depth analysis of policy impact and development for government or think tanks.</p>
-                    </div>
+            <section id="contact" class="content-section">
+                <header class="mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4 relative inline-block">Connect<span class="absolute -bottom-2 left-0 w-10 h-1.5 gold-bg rounded-full"></span></h2>
+                </header>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="service-card p-6 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition">
+                        <div class="text-3xl gold-text"><i class="fab fa-linkedin"></i></div>
+                        <div><h4 class="font-bold text-white">LinkedIn</h4><p class="text-xs text-gray-400">Professional Network</p></div>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="service-card p-6 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition">
+                        <div class="text-3xl gold-text"><i class="fab fa-github"></i></div>
+                        <div><h4 class="font-bold text-white">GitHub</h4><p class="text-xs text-gray-400">Code & Projects</p></div>
+                    </a>
                 </div>
-
-                <div class="service-card p-6 rounded-2xl flex gap-4">
-                    <div class="text-3xl gold-text pt-1"><i class="fas fa-pen-nib"></i></div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white mb-2">Technical Writing</h4>
-                        <p class="text-sm text-gray-400">Communicating complex technical concepts and policy analysis with professional clarity.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
+    <script>
+        // Simple tab switching logic
+        function showTab(tabId) {
+            document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.getElementById('link-' + tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
